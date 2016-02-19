@@ -67,6 +67,7 @@ Change Log:
 V1.00, 25/11/2013 - Initial version
 V1.01, 11/02/2014 - Added parameters for emailing the report and specifying an "age" to report on
 V1.02, 17/02/2014 - Fixed missing $mydir variable and added UTF8 encoding to Export-CSV and Send-MailMessage
+V1.03, 19/02/2016 - Added OrganizationalUnit to report, plus minor fixes
 #>
 
 #requires -version 2
