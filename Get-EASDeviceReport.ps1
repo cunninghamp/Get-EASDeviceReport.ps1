@@ -164,11 +164,11 @@ Write-Host "$($MailboxesWithEASDevices.count) mailboxes with EAS device partners
 Foreach ($Mailbox in $MailboxesWithEASDevices)
 {
     
-    $EASDeviceStats = @(Get-ActiveSyncDeviceStatistics -Mailbox $Mailbox.Identity)
+    $EASDeviceStats = @(Get-ActiveSyncDeviceStatistics -Mailbox $Mailbox.Identity -WarningAction SilentlyContinue)
     
     Write-Host "$($Mailbox.Identity) has $($EASDeviceStats.Count) device(s)"
 
-    $MailboxInfo = Get-Mailbox $Mailbox.Identity | Select DisplayName,PrimarySMTPAddress
+    $MailboxInfo = Get-Mailbox $Mailbox.Identity | Select DisplayName,PrimarySMTPAddress,OrganizationalUnit
     
     Foreach ($EASDevice in $EASDeviceStats)
     {
@@ -192,6 +192,7 @@ Foreach ($Mailbox in $MailboxesWithEASDevices)
 
             $reportObj = New-Object PSObject
             $reportObj | Add-Member NoteProperty -Name "Display Name" -Value $MailboxInfo.DisplayName
+            $reportObj | Add-Member NoteProperty -Name "Organizational Unit" -Value $MailboxInfo.OrganizationalUnit
             $reportObj | Add-Member NoteProperty -Name "Email Address" -Value $MailboxInfo.PrimarySMTPAddress
             $reportObj | Add-Member NoteProperty -Name "Sync Age (Days)" -Value $syncAge
                 
