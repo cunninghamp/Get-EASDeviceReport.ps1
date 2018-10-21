@@ -34,17 +34,13 @@ Sends an email report with CSV file attached for all ActiveSync devices.
 Limits the report to devices that have not attempted synced in more than 30 days.
 
 ## Credits
-
 Written by: Paul Cunningham
 
 Find me on:
 
-- My Blog:	http://paulcunningham.me
-- Twitter:	https://twitter.com/paulcunningham
-- LinkedIn:	http://au.linkedin.com/in/cunninghamp/
-- Github:	https://github.com/cunninghamp
+* My Blog:	https://paulcunningham.me
+* Twitter:	https://twitter.com/paulcunningham
+* LinkedIn:	https://au.linkedin.com/in/cunninghamp/
+* Github:	https://github.com/cunninghamp
 
-For more Exchange Server tips, tricks and news check out Exchange Server Pro.
-
-- Website:	http://exchangeserverpro.com
-- Twitter:	http://twitter.com/exchservpro
+Check out my [books](https://paulcunningham.me/books/) and [courses](https://paulcunningham.me/training/) to learn more about Office 365 and Exchange Server.
